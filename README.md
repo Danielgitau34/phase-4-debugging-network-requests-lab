@@ -68,6 +68,21 @@ developing your own process.
 
   - How I debugged:
 
-- Donate a toy to Goodwill (and delete it from our database)
+- Donate a toy to Goodwill (and delete it from  database)
 
-  - How I debugged:
+  - How I debugged:To start debugging, I would first check the Rails server logs for any errors or warnings that might give me an idea of what's going wrong with the API. I would also check the network tab in the browser's developer tools to see if any requests are failing or returning unexpected responses.
+
+Add a new toy when the toy form is submitted:
+
+I would check the controller action responsible for handling the toy creation request to see if it's receiving the correct parameters and if any errors are being thrown during the creation process.
+I would also check if the CORS configuration is correctly set up to allow requests from the frontend to the API.
+Update the number of likes for a toy:
+
+I would check the controller action responsible for updating the number of likes for a toy to see if it's receiving the correct parameters and if any errors are being thrown during the update process.
+I would also check if the frontend is sending the correct request method (PUT or PATCH) and if the CSRF token is being included in the request headers.
+Donate a toy to Goodwill (and delete it from our database):
+
+I would check the controller action responsible for handling the toy deletion request to see if it's receiving the correct parameters and if any errors are being thrown during the deletion process.
+I would also check if the frontend is sending the correct request method (DELETE) and if the CSRF token is being included in the request headers.
+Additionally, I would check if the controller is correctly handling the deletion of the associated records in any associated models, such as deleting any associated likes for the toy being donated.
+
